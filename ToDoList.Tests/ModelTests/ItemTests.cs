@@ -33,6 +33,16 @@ namespace ToDoList.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void Equals_ReturnsTrueIfDescriptionsAreTheSame_Item()
+    {
+      // Arrange, Act
+      Item firstItem = new Item("Mow the lawn");
+      Item secondItem = new Item("Mow the lawn");
+
+      // Assert
+      Assert.AreEqual(firstItem, secondItem);
+    }
     // [TestMethod]
     // public void ItemConstructor_CreatesInstanceOfItem_Item()
     // {
